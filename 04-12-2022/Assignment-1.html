@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #heading {
+            font-size: 100px;
+            font-weight: bolder;
+            color: darkslateblue;
+            margin-top: 100px;
+        }
+        #val {
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 5px 20px;
+            border: 3px solid black;
+            border-radius: 10px;
+            background-color: azure;
+            width:150px;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            border-color: rgb(107, 115, 230);
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1 id="heading">Counter</h1>
+        <h2 id="val">0</h2>
+        <div class="butttons">
+            <button class="btn" onclick="dec()">Decrease</button>
+            <button class="btn" onclick="res()">Reset</button>
+            <button class="btn" onclick="inc()">Increases</button>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        const x = document.getElementById('val');
+        let count = 0;
+
+        function dec(){
+            count--;
+            x.innerText = count;
+            x.style.color='red';
+        }
+        function inc(){
+            count = count+1;
+            x.innerText = count;
+            x.style.color='darkgreen';
+        }
+        function res(){
+            count = 0;
+            x.innerText = count;
+            x.style.color='black'
+        }
+    </script>
+</html>

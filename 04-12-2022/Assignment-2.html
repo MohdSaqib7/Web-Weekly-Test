@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Change</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        #main-container {
+            width: 500px;
+        }
+        .sub-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            width:500px;
+        }
+        .box {
+            width:100px;
+            height: 100px;
+            border:3px solid whitesmoke;
+            border-radius: 50%;
+        }
+
+        #box1 {
+            background-color: rgb(243, 101, 101);
+        }
+        #box1:hover {
+            border-color: rgb(124, 14, 14);
+        }
+
+        #box2 {
+            background-color: white;
+        }
+        #box2:hover {
+            border-color: black;
+        }
+
+        #box3 {
+            background-color: rgb(63, 155, 216);
+        }
+        #box3:hover {
+            border-color: rgb(12, 12, 179);
+        }
+
+        #box4 {
+            background-color: rgb(26, 226, 26);
+        }
+        #box4:hover {
+            border-color: rgb(6, 160, 6);
+        }
+
+        h1 {
+            margin-left: 70px;
+            font-weight: bold;
+        }
+        p {
+            margin-left: 100px;
+            margin-right: 80px;
+            justify-self: center;
+            font-weight: bolder;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+   <div id="main-container">
+        <h1>Color Schema Switcher</h1>
+        <div class="sub-container">
+            <div class="box" id="box1" onclick="fun1()"></div>
+            <div class="box" id="box2" onclick="fun2()"></div>
+            <div class="box" id="box3" onclick="fun3()"></div>
+            <div class="box" id="box4" onclick="fun4()"></div>
+        </div>
+        <p>Try Clicking on one of the colors above to change the background color of this page</p>
+   </div>
+</body>
+    <script>
+        const x = document.getElementsByTagName('body')[0];
+        function fun1(){
+            x.style['background-color'] = 'rgb(243, 101, 101)';
+        }
+        function fun2(){
+            x.style['background-color'] = 'whitesmoke';
+        }
+        function fun3(){
+            x.style['background-color'] = 'rgb(63, 155, 216)';
+        }
+        function fun4(){
+            x.style['background-color'] = 'rgb(26, 226, 26)';
+        }
+    </script>
+</html>
