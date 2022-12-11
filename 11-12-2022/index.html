@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">CREATE YOUR ACCOUNT</h1>
+        <form>
+            <label class="left a">Name</label>
+            <input type="text" name="name" placeholder="Enter your Name" id="userName">
+            <p>Name must be (5-20) & alphabet </p>
+
+            <label class="left b">Email</label>
+            <input type="email" name="email" placeholder="Enter your email id" id="userEmail">
+            <p>Email must be e.g. me@mydomain.com</p>
+
+            <label class="left c">Set Password</label>
+            <input type="password" name="password" placeholder="Set a password" id="pass1">
+            <p>Password must alphanumeric (7 - 20)</p>
+
+            <label class="left d">Confirm Password</label>
+            <input type="text" name="confirm_password" placeholder="Confirm your password" id="pass2">
+            <p>Password must alphanumeric (7 - 20)</p>
+
+            <button type="button" id="btn" onclick="fun()">Create</button>
+            <h4 id="msg"></h4>
+        </form>
+
+        <table id="add">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+            </tr>
+          </table>
+    </div>  
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
